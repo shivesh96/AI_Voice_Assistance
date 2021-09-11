@@ -49,8 +49,8 @@ def acceptCommand():
 
 
 if __name__ == "__main__":
-    # speak("Hello, I am Cybolite Assistant")
-    speak("My God is Mr. Shivash")
+    speak("Hello, I am Cybolite Assistant")
+    #speak("My God is Mr. Shivash")
     acceptCommand()
 
 
