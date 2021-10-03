@@ -6,7 +6,7 @@ import speech_recognition as sr
 # Video Reference
 # https://www.youtube.com/watch?v=Lp9Ftuq2sVI&t=1220s
 
-engine = pyttsx3.init('sapi5')
+engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 print(voices[1].id)
 voices = engine.setProperty('voice', voices[1].id)
