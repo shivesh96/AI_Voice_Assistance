@@ -11,6 +11,11 @@ voices = engine.getProperty('voices')
 print(voices[1].id)
 voices = engine.setProperty('voice', voices[1].id)
 
+def change_voice(engine, language, gender='VoiceGenderFemale'):
+    for voice in engine.getProperty('voices'):
+        if language in voice.languages and gender == voice.gender:
+            engine.setProperty('voice', voice.id)
+            return True
 
 def speak(audio):
     engine.say(audio)
@@ -50,6 +55,7 @@ def acceptCommand():
 
 
 if __name__ == "__main__":
+    change_voice(engine, "en_US", "VoiceGenderFemale")
     speak("Hello, I am Cybolite Assistant")
     #speak("My God is Mr. Shivash")
     acceptCommand()
